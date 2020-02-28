@@ -1,4 +1,5 @@
 getInputValues = () => {
+    //Cases of test
     //https://www.aulafacil.com/:cursos/frances/:a1-t1056
     //https://www.aulafacil.com/cursos/frances?sort=desc&limit=10
     
@@ -48,6 +49,9 @@ getInputValues = () => {
         
         alert("Check console log to inspect printed object!");    
     }
+    else {
+      alert("You must fill both boxes and provide a valid url domain .com!");    
+    }
 }
 
 createObject = (listKey, listValue) => {
@@ -75,5 +79,4 @@ CreateQueryObject = (queries) => {
 }
 
 //have to clean code
-//have to delete when is c /algo
-//Delete last function, just show a message
+//have to add condition and alert when not have .com
