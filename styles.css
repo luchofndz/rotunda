@@ -56,8 +56,9 @@
 .text-unison {
   color: white;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 23px;
   font-family: "Helvetica Neue", sans-serif;
+  font-style: oblique;
 }
 .text-above-submit {
   padding-bottom: 20px;
