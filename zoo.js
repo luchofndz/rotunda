@@ -2,41 +2,67 @@ class Zoo {
   constructor() {
     this.animalCollection = [];
   }
-  addAnimal(animal) {
+  addAnimal(animalObj) {
     this.animalCollection.push(animal)
     return this.animalCollection;
   }
-  createAnimal(kind) {
-    var aniaml = new Animmal;
-    animal.animalSound("grr");
-    animal.speak("this is a test message");
+  createAnimal(animalSelected, message) {
+    console.log(animalSelected, message);
+    var animal = new Animal;
+    var sound = this.getAnimalSound(animalSelected);
+    animal.animalSound(sound);
+    animal.speak(message);
     this.addAnimal(animal);
+  }
+  getAnimalSound(animal) {
+    let text = "";
+    switch(animal) {
+      case "Tiger":
+        text = " grr ";
+        break;
+      case "Cow":
+        text = " muu ";
+        break;
+      case "Snake":
+        text = " pss ";
+        break;
+      case "Chicken":
+        text = " pio ";
+        break;
+      case "Wolf":
+        text = " auu ";
+        break;
+      default:
+        text = "";
+    }
+    return (
+      text
+    );
   }
 }
 
 class Animal {
   constructor() {
-    this.animalWord = " Animal Sound ";
+    this.animalWord = " Sound ";
   }
   animalSound(sound) {
     this.animalSound = sound;
   }
   speak(inputText) {
+    console.log(inputText);
     var output = inputText.split(" ").join(this.animalWord);
     alert(output);
   }
 }
 
 submit = () => {
-  //var zoo = new Zoo;
-  //const textMessage = document.getElementById("").value;
-  //const textMessage = document.getElementById("").value;
-  var e = document.getElementsByClassName("dropdown-selection");
-  //var e = document.getElementById("dropdown-selection");
-  var result = e.options[e.selectedIndex].value;
-  console.log("result", result);
-  alert(result); //ID002
-  //$(".dropdown-toggle").dropdown();
+  var zoo = new Zoo;
+  var animalSelected = document.getElementById('animal-selection');
+  var animal = animalSelected.options[animalSelected.selectedIndex].innerHTML;
+  console.log("text", animal);
+  var message = document.getElementById('form-message').value;
+  zoo.createAnimal(animal, message);
+  
 }
 
 /*

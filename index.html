@@ -23,6 +23,7 @@
         <div class="row">
           <div class="col">
             <div class="center-input">
+              <h3>URL Parse</h3>
               <p>Insert an url format</p>
               <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
@@ -46,29 +47,32 @@
                     
           <div class="col line-left">
             <div class="center-input">
-              <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="dropdown-selection">
-                  Select an Animal
-                </button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <a class="dropdown-item" value="1" href="#">Lion</a>
-                  <a class="dropdown-item" value="2" href="#">Cat</a>
+              <h3>Zoo</h3>
+              <p>Select an animal</p>
+              <select id="animal-selection" name="animal-selection" class="btn btn-secondary dropdown-toggle">
+                <option selected="selected">Tiger</option>
+                <option>Tiger</option>
+                <option>Cow</option>
+                <option>Snake</option>
+                <option>Chiken</option>
+                <option>wolf</option>
+              </select>
+              <p>Insert your message</p>
+              <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Message:</span>
                 </div>
+                <input type="text" class="form-control" id="form-message" aria-label="Sizing example input" placeholder="example... Hello I'm a tiger" aria-describedby="inputGroup-sizing-sm">
               </div>
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Insert your message</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <small id="emailHelp" class="form-text text-muted">After select an animal and write a message press submit</small>
-                </div>
-                <button type="submit" class="btn btn-primary"  onclick="submit();">Submit</button>
-              </form>
+              <small id="emailHelp" class="form-text text-muted">After select an animal and write a message press submit</small>
+              <button type="submit" class="btn btn-primary"  onclick="submit();">Submit</button>
               <script src='zoo.js'></script>
             </div>
           </div>
         </div>
 
         <div class="carousel-container">
+          <h3>Advices to improve unision</h3>
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
