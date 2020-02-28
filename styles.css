@@ -22,8 +22,11 @@
   border-left: 2px dashed #808080;
 }
 .carousel-container {
-  padding-top: 40px;
+  margin-top: 40px;
+  padding: 10px;
   padding-bottom: 60px;
+  background-color: #BEBEBE;
+  border-radius: 5px;
 }
 .footer {
   background-color: #4c4c4c;
@@ -32,4 +35,20 @@
 }
 .text-footer {
   color: #DCDCDC;
+}.text-unison-container {
+  padding-top: 20px;
+  width: 80%;
+  padding: 10%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  background-color: #808080;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+.text-unison {
+  color: white;
+  font-family: cursive;
+  font-weight: 800;
+  font-size: 18px;
 }
