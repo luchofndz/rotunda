@@ -40,13 +40,13 @@ getInputValues = () => {
             var queries = parserUrlInstance.search;
             var queriesObject = CreateQueryObject(queries);
             var mergedObject = {...variablesObject, ...queriesObject};
-            console.log("total", mergedObject);  
+            console.log("object", mergedObject);  
         }
         else{
-          console.log("path", variablesObject);
+          console.log("object", variablesObject);
         }
         
-        alert(print(variablesObject));    
+        alert("Check console log to inspect printed object!");    
     }
 }
 
@@ -72,20 +72,6 @@ CreateQueryObject = (queries) => {
   return (
     queriesObject
   );
-}
-
-var print = function(o){
-  var str='';
-
-  for(var p in o){
-      if(typeof o[p] == 'string'){
-          str+= p + ': ' + o[p]+'; ';
-      }else{
-          str+= p + ' { ' + print(o[p]) + '}';
-      }
-  }
-
-  return str;
 }
 
 //have to clean code

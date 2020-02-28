@@ -3,13 +3,14 @@ class Zoo {
     this.animalCollection = [];
   }
   addAnimal(animalObj) {
-    this.animalCollection.push(animal)
+    this.animalCollection.push(animalObj)
     return this.animalCollection;
   }
   createAnimal(animalSelected, message) {
-    console.log(animalSelected, message);
+    console.log("values selected:", animalSelected, message);
     var animal = new Animal;
     var sound = this.getAnimalSound(animalSelected);
+    console.log(sound);
     animal.animalSound(sound);
     animal.speak(message);
     this.addAnimal(animal);
@@ -43,14 +44,14 @@ class Zoo {
 
 class Animal {
   constructor() {
-    this.animalWord = " Sound ";
+    this.word = " Sound ";
   }
   animalSound(sound) {
-    this.animalSound = sound;
+    this.word = sound;
   }
   speak(inputText) {
-    console.log(inputText);
-    var output = inputText.split(" ").join(this.animalWord);
+    var output = inputText.split(" ").join(this.word);
+    console.log(output);
     alert(output);
   }
 }
@@ -59,13 +60,6 @@ submit = () => {
   var zoo = new Zoo;
   var animalSelected = document.getElementById('animal-selection');
   var animal = animalSelected.options[animalSelected.selectedIndex].innerHTML;
-  console.log("text", animal);
   var message = document.getElementById('form-message').value;
   zoo.createAnimal(animal, message);
-  
 }
-
-/*
-mycar = new Model("Ford", "Mustang");
-document.getElementById("demo").innerHTML = mycar.show();
-*/
