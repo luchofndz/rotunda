@@ -2,28 +2,27 @@ getInputValues = () => {
   
   //Get input values
   const urlFormat = document.getElementById("form-format").value;
-  const urlInput = document.getElementById("form-value").value;
+  const urlValues = document.getElementById("form-value").value;
 
-  if (urlFormat && urlInput) {
-
-    //Filter URl format by / content
+  if (urlFormat && urlValues) {
+    //Array format
     var parserUrlFormat = document.createElement("a"); 
     parserUrlFormat.href = urlFormat; 
-    var pathArray = parserUrlFormat.pathname.split('/');
+    var formatNotFiltered = parserUrlFormat.pathname.split('/');
 
     //Array values
     var parserUrlInstance = document.createElement("a"); 
-    parserUrlInstance.href = urlInput;
-    var valuesArray = parserUrlInstance.pathname.split('/');
+    parserUrlInstance.href = urlValues;
+    var valuesNotFiltered = parserUrlInstance.pathname.split('/');
     
     //Delete white spaces, colon and constant variables
     var arrayKeys = [];
     var arrayValues = [];
-    for (i = 0; i < pathArray.length; i++) {
-      if (pathArray[i] !=='' && pathArray[i].charAt(0) === ':') {
-        arrayKeys.push(pathArray[i].substring(1));
-        if( valuesArray[i] && valuesArray[i] !=='' ) {
-          arrayValues.push(valuesArray[i]);
+    for (i = 0; i < formatNotFiltered.length; i++) {
+      if (formatNotFiltered[i] !=='' && formatNotFiltered[i].charAt(0) === ':') {
+        arrayKeys.push(formatNotFiltered[i].substring(1));
+        if( valuesNotFiltered[i] && valuesNotFiltered[i] !=='' ) {
+          arrayValues.push(valuesNotFiltered[i]);
         }
         else {
           arrayValues.push(null);
