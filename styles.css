@@ -7,6 +7,9 @@
   padding-top: 20px;
   text-align: center;
 }
+.sub-titles-rotunda {
+  padding-bottom: 20px;
+}
 .rotunda-img {
   padding-top: 10px;
   margin: auto;
@@ -45,6 +48,9 @@
   background-color: #808080;
   opacity: 0.7;
   border-radius: 20px;
+}
+.title-unison, .sub-titles-rotunda {
+  font-family: "Times New Roman", Times, serif;
 }
 .text-unison {
   color: white;
