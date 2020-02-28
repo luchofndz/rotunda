@@ -77,6 +77,3 @@ CreateQueryObject = (queries) => {
     queriesObject
   );
 }
-
-//have to clean code
-//have to add condition and alert when not have .com
