@@ -1,7 +1,7 @@
 getInputValues = () => {
-    //https://platzi.com/clases/fundamentos-javascript/
     //https://www.aulafacil.com/:cursos/frances/:a1-t1056
     //https://www.aulafacil.com/cursos/frances?sort=desc&limit=10
+    
     //Get input values
     const urlFormat = document.getElementById("form-format").value;
     const urlInput = document.getElementById("form-value").value;
