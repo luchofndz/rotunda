@@ -24,4 +24,10 @@
 }
 .carousel-container {
   padding-top: 40px;
+  padding-bottom: 60px;
+}
+.footer {
+  background-color: #4c4c4c;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
