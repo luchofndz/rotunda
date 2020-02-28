@@ -21,14 +21,14 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">url format:</span>
             </div>
-            <input type="text" class="form-control" id="form-format" aria-label="Sizing example input" placeholder="example... /:version/api/:collection/:id" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" id="form-format" aria-label="Sizing example input" placeholder="example... https://www.aulafacil.com/:cursos/frances/:a1-t1056" aria-describedby="inputGroup-sizing-sm">
           </div>
           <p>Insert an url instance</p>
           <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">url instance:</span>
             </div>
-            <input type="text" class="form-control" id="form-value" aria-label="Sizing example input" placeholder="example... /6/api/listings/3?sort=desc&limit=10" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" id="form-value" aria-label="Sizing example input" placeholder="example... https://www.aulafacil.com/cursos/frances?sort=desc&limit=10" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div>
             <button type="button" class="btn btn-primary" onclick="getInputValues();">Submit</button>
@@ -42,8 +42,8 @@
               Select an Animal
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <a class="dropdown-item" href="#">Dropdown link</a>
-              <a class="dropdown-item" href="#">Dropdown link</a>
+              <a class="dropdown-item" href="#">Lion</a>
+              <a class="dropdown-item" href="#">Cat</a>
             </div>
           </div>
           <form>
@@ -52,7 +52,7 @@
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <small id="emailHelp" class="form-text text-muted">After select an animal and write a message press submit</small>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary"  onclick="submit();">Submit</button>
           </form>
           <script src='zoo.js'></script>
         </div>

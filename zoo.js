@@ -1,49 +1,39 @@
 class Zoo {
-  constructor(brand) {
-    this.carname = brand;
+  constructor() {
+    this.animalCollection = [];
   }
-  present() {
-    return 'I have a ' + this.carname;
+  addAnimal(animal) {
+    this.animalCollection.push(animal)
+    return this.animalCollection;
+  }
+  createAnimal = (kind) => {
+    var aniaml = new Animmal;
+    animal.animalSound("grr");
+    animal.speak("this is a test message");
+    this.addAnimal(animal);
   }
 }
 
 class Animal {
   constructor() {
+    this.animalWord = " Animal Sound ";
   }
-
-  // insert = (index, string) => {
-  //   if (index > 0)
-  //   {
-  //     return this.substring(0, index) + string + this.substring(index, this.length);
-  //   }
-  
-  //   return string + this;
-  // }
-
+  animalSound = (sound) => {
+    this.animalSound = sound;
+  }
   speak = (inputText) => {
-    var inputText = "I want apple";
-    var b = " miaw ";
-    var output;
-
-    output = inputText.replace("", b);
-    var inputText = "I want apple";
-    var b = " miaw ";
-    var output = inputText.split(" ").join(b);
-   alert(output);
-    
+    var output = inputText.split(" ").join(this.animalWord);
+    alert(output);
   }
 }
+
+submit = () => {
+  var zoo = new Zoo;
+  const textMessage = document.getElementById("").value;
+  //const textMessage = document.getElementById("").value;
+}
+
 /*
-class Cat extends Animal {
-  constructor(brand, mod) {
-    super(brand);
-    this.model = mod;
-  }
-  show() {
-    return this.present() + ', it is a ' + this.model;
-  }
-}
-
 mycar = new Model("Ford", "Mustang");
 document.getElementById("demo").innerHTML = mycar.show();
 */

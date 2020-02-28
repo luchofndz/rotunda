@@ -90,3 +90,4 @@ var print = function(o){
 
 //have to clean code
 //have to delete when is c /algo
+//Delete last function, just show a message
