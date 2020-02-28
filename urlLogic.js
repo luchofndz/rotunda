@@ -40,34 +40,52 @@ getInputValues = () => {
             var queries = parserUrlInstance.search;
             var queriesObject = CreateQueryObject(queries);
             var mergedObject = {...variablesObject, ...queriesObject};
+            console.log("total", mergedObject);  
         }
-        console.log("path", variablesObject);
-        console.log("total", mergedObject);        
+        else{
+          console.log("path", variablesObject);
+        }
+        
+        alert(print(variablesObject));    
     }
 }
 
 createObject = (listKey, listValue) => {
-    objectKValue = new Object;
-    for (i = 0; i < listKey.length; i++) {
-        let key = listKey[i];
-        let value = listValue[i];
-        objectKValue[key] = value;
-    }
-    return (
-        objectKValue
-    );
+  objectKValue = new Object;
+  for (i = 0; i < listKey.length; i++) {
+    let key = listKey[i];
+    let value = listValue[i];
+    objectKValue[key] = value;
+  }
+  return (
+    objectKValue
+  );
 }
 
 CreateQueryObject = (queries) => {
-    let queriesObject = new Object;
-    var queriesFiltered = queries.replace(/^\?/, '').split('&');
-    queriesFiltered.map((item, index) => {
-        var split = item.split('=');
-        queriesObject[split[0]] = split[1];
-    });
-    return (
-        queriesObject
-    );
+  let queriesObject = new Object;
+  var queriesFiltered = queries.replace(/^\?/, '').split('&');
+  queriesFiltered.map((item, index) => {
+    var split = item.split('=');
+    queriesObject[split[0]] = split[1];
+  });
+  return (
+    queriesObject
+  );
+}
+
+var print = function(o){
+  var str='';
+
+  for(var p in o){
+      if(typeof o[p] == 'string'){
+          str+= p + ': ' + o[p]+'; ';
+      }else{
+          str+= p + ' { ' + print(o[p]) + '}';
+      }
+  }
+
+  return str;
 }
 
 //have to clean code

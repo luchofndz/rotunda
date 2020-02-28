@@ -9,48 +9,54 @@
   <Head>
     <div>
       <img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/397111/logo" alt="Rotunda Software" data-object-fit="contain">
-      <h1>Rotunda Excercise</h1>
+      <h1>Rotunda Excercises</h1>
     </div>
   </Head>
   <body>
-    <div>
-      <p>Insert an url format</p>
-      <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">url format:</span>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Insert an url format</p>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">url format:</span>
+            </div>
+            <input type="text" class="form-control" id="form-format" aria-label="Sizing example input" placeholder="example... /:version/api/:collection/:id" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <p>Insert an url instance</p>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">url instance:</span>
+            </div>
+            <input type="text" class="form-control" id="form-value" aria-label="Sizing example input" placeholder="example... /6/api/listings/3?sort=desc&limit=10" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary" onclick="getInputValues();">Submit</button>
+            <script src='urlLogic.js'></script>
+          </div>
         </div>
-        <input type="text" class="form-control" id="form-format" aria-label="Sizing example input" placeholder="example... /:version/api/:collection/:id" aria-describedby="inputGroup-sizing-sm">
-      </div>
-      <p>Insert an url instance</p>
-      <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">url instance:</span>
-        </div>
-        <input type="text" class="form-control" id="form-value" aria-label="Sizing example input" placeholder="example... /6/api/listings/3?sort=desc&limit=10" aria-describedby="inputGroup-sizing-sm">
-      </div>
-      </div>
-      <div>
-        <button type="button" class="btn btn-primary" onclick="getInputValues();">Submit</button>
-        <script src='urlLogic.js'></script>
-      </div>
-    <div>
-      <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select an Animal
-        </button>
-        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a class="dropdown-item" href="#">Dropdown link</a>
-          <a class="dropdown-item" href="#">Dropdown link</a>
+                  
+        <div class="col">
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select an Animal
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href="#">Dropdown link</a>
+              <a class="dropdown-item" href="#">Dropdown link</a>
+            </div>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Insert your message</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">After select an animal and write a message press submit</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <script src='zoo.js'></script>
         </div>
       </div>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Insert your message</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">After select an animal and write a message press submit</small>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
     </div>
   </body>
 </html>
