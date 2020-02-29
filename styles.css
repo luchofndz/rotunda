@@ -51,6 +51,7 @@
   border-radius: 20px;
 }
 .container-title-unison {
+  width: -moz-max-content;
   width: fit-content;
   padding-right: 14px;
   padding-left: 14px;
