@@ -10,7 +10,6 @@ class Zoo {
     console.log("values selected:", animalSelected, message);
     var animal = new Animal;
     var sound = this.getAnimalSound(animalSelected);
-    console.log(sound);
     animal.animalSound(sound);
     animal.speak(message);
     this.addAnimal(animal);
