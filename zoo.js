@@ -60,5 +60,12 @@ submit = () => {
   var animalSelected = document.getElementById('animal-selection');
   var animal = animalSelected.options[animalSelected.selectedIndex].innerHTML;
   var message = document.getElementById('form-message').value;
-  zoo.createAnimal(animal, message);
+
+  if (message && animalSelected) {
+    zoo.createAnimal(animal, message);
+  }
+  else {
+    alert("Please select an animal and write a message before submit!");
+  }
+  
 }
