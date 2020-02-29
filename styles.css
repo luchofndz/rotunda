@@ -66,3 +66,19 @@
 .padding-top-20 {
   padding-top: 20px;
 }
+blockquote {
+  border:none;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  quotes: "\201C""\201D""\2018""\2019"; 
+}
+
+blockquote div:before, blockquote div:after { 
+content: open-quote;
+font-weight: bold;
+font-size:100px;
+color:white; 
+}
+
+blockquote div:after { 
+  content: close-quote;
+}
