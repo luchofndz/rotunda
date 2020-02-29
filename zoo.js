@@ -8,8 +8,8 @@ class Zoo {
   }
   createAnimal(animalSelected, message) {
     console.log("values selected:", animalSelected, message);
-    var animal = new Animal;
-    var sound = this.getAnimalSound(animalSelected);
+    const animal = new Animal;
+    let sound = this.getAnimalSound(animalSelected);
     animal.animalSound(sound);
     animal.speak(message);
     this.addAnimal(animal);
@@ -49,23 +49,22 @@ class Animal {
     this.word = sound;
   }
   speak(inputText) {
-    var output = inputText.split(" ").join(this.word);
+    let output = inputText.split(" ").join(this.word);
     console.log(output);
     alert(output);
   }
 }
 
 submit = () => {
-  var zoo = new Zoo;
-  var animalSelected = document.getElementById('animal-selection');
-  var animal = animalSelected.options[animalSelected.selectedIndex].innerHTML;
-  var message = document.getElementById('form-message').value;
+  const zoo = new Zoo;
+  let animalSelected = document.getElementById('animal-selection');
+  let animal = animalSelected.options[animalSelected.selectedIndex].innerHTML;
+  let message = document.getElementById('form-message').value;
 
   if (message && animalSelected) {
     zoo.createAnimal(animal, message);
   }
   else {
     alert("Please select an animal and write a message before submit!");
-  }
-  
+  }  
 }
