@@ -2,6 +2,7 @@ getInputValues = () => {
   //Get input values
   const urlFormat = document.getElementById("form-format").value;
   const urlValues = document.getElementById("form-value").value;
+  let outputObject = null;
 
   if (urlFormat && urlValues) {
     //Array format
@@ -28,20 +29,20 @@ getInputValues = () => {
         }
       }
     }
-    const variablesObject = createObject(arrayKeys, arrayValues);
-
+    let variablesObject = createObject(arrayKeys, arrayValues);
+    
     //Queries
     if (parserUrlInstance.search) {
       let queries = parserUrlInstance.search;
       const queriesObject = CreateQueryObject(queries);
-      const mergedObject = {...variablesObject, ...queriesObject};
-      console.log("object", mergedObject);  
+      mergedObject = {...variablesObject, ...queriesObject};
+      outputObject = JSON.stringify(mergedObject);
     }
     else {
-      console.log("object", variablesObject);
+      outputObject = JSON.stringify(variablesObject);
     }
-    
-    alert("Check console log to inspect printed object!");    
+    alert(outputObject);
+    console.log("object", outputObject);   
   }
   else {
     alert("You must fill both boxes and provide a url with domain!");    
