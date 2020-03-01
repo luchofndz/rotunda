@@ -44,7 +44,7 @@ getInputValues = () => {
     alert("Check console log to inspect printed object!");    
   }
   else {
-    alert("You must fill both boxes and provide a valid url domain .com!");    
+    alert("You must fill both boxes and provide a url with domain!");    
   }
 }
 
