@@ -100,7 +100,7 @@
               <div class="text-above-submit">
                 <small id="emailHelp" class="form-text text-muted">After select an animal and write a message press submit</small>
               </div>
-              <button type="submit" class="btn btn-primary"  onclick="submit();">Submit</button>
+              <button type="submit" class="btn btn-primary"  onclick="submit();" data-toggle="modal" data-target=".bd-zoo-modal-lg">Submit</button>
               <script src='zoo.js'></script>
             </div>
           </div>
@@ -108,6 +108,25 @@
             <div class="modal-dialog modal-lg">
               <div class="modal-content padding-modal">
                 <img src="./assets/images/screenshot-mail.google.com-2020.03.01-12-58-01.png" alt="img">
+              </div>
+            </div>
+          </div>
+          <div class="modal fade bd-zoo-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">ZOO</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p id="output-zoo">
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
           </div>

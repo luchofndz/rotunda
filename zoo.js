@@ -51,7 +51,7 @@ class Animal {
   speak(inputText) {
     let output = inputText.split(" ").join(this.word);
     console.log(output);
-    alert(output);
+    document.getElementById("output-zoo").innerHTML = output;
   }
 }
 
@@ -65,6 +65,7 @@ submit = () => {
     zoo.createAnimal(animal, message);
   }
   else {
-    alert("Please select an animal and write a message before submit!");
+    let output = "Please select an animal and write a message before submit!";
+    document.getElementById("output-zoo").innerHTML = output;
   }  
 }
