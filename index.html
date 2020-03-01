@@ -23,7 +23,10 @@
         <div class="row">
           <div class="col">
             <div class="center-input">
-              <h3 class="sub-titles-rotunda">URL Parse</h3>
+              <div>
+                <h3 class="sub-titles-rotunda">URL Parse</h3>
+                <button type="button" class="btn btn-info info-url" data-toggle="modal" data-target=".bd-first-modal-lg">info</button>
+              </div>
               <p>Insert an url format</p>
               <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
@@ -46,11 +49,21 @@
                 <script src='urlLogic.js'></script>
               </div>
             </div>
-          </div>
-                    
+            <div class="modal fade bd-first-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content padding-modal">
+                  <img src="./assets/images/screenshot-mail.google.com-2020.03.01-12-51-42.png" alt="img">
+                </div>
+              </div>
+            </div>
+
+       </div>          
           <div class="col line-left">
             <div class="center-input">
-              <h3 class="sub-titles-rotunda">Zoo</h3>
+              <div>
+                <h3 class="sub-titles-rotunda">Zoo</h3>
+                <button type="button" class="btn btn-info info-zoo" data-toggle="modal" data-target=".bd-second-modal-lg">info</button>
+              </div>
               <p>Select an animal</p>
               <select id="animal-selection" name="animal-selection" class="btn btn-secondary dropdown-toggle">
                 <option selected="selected">Tiger</option>
@@ -71,6 +84,13 @@
               </div>
               <button type="submit" class="btn btn-primary"  onclick="submit();">Submit</button>
               <script src='zoo.js'></script>
+            </div>
+          </div>
+          <div class="modal fade bd-second-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content padding-modal">
+                <img src="./assets/images/screenshot-mail.google.com-2020.03.01-12-58-01.png" alt="img">
+              </div>
             </div>
           </div>
         </div>

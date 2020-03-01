@@ -94,3 +94,12 @@ blockquote div:after {
   width: 46px;
   float: right;
 }
+.padding-modal {
+  padding: 40px;
+}
+.info-zoo, .info-url {
+  float: right;
+}
+.info-url {
+  margin-bottom: 10px;
+}
