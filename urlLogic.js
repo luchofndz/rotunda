@@ -41,12 +41,12 @@ getInputValues = () => {
     else {
       outputObject = JSON.stringify(variablesObject);
     }
-    alert(outputObject);
     console.log("object", outputObject);   
   }
   else {
-    alert("You must fill both boxes and provide a url with domain!");    
+    outputObject = "You must fill both boxes and provide a url with domain!";    
   }
+  document.getElementById("output-object").innerHTML = outputObject;
 }
 
 createObject = (listKey, listValue) => {

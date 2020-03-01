@@ -45,7 +45,7 @@
                 <div class="text-above-submit">
                   <small id="emailHelp" class="form-text text-muted">You must provide urls that contain a domain </small>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="getInputValues();">Submit</button>
+                <button type="button" class="btn btn-primary" onClick="getInputValues();" data-toggle="modal" data-target=".bd-url-modal-lg">Submit</button>
                 <script src='urlLogic.js'></script>
               </div>
             </div>
@@ -53,6 +53,25 @@
               <div class="modal-dialog modal-lg">
                 <div class="modal-content padding-modal">
                   <img src="./assets/images/screenshot-mail.google.com-2020.03.01-12-51-42.png" alt="img">
+                </div>
+              </div>
+            </div>
+            <div class="modal fade bd-url-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">URL PARSE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="output-object">
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
               </div>
             </div>
