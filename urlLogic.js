@@ -29,19 +29,18 @@ getInputValues = () => {
         }
       }
     }
-    let variablesObject = createObject(arrayKeys, arrayValues);
+    const variablesObject = createObject(arrayKeys, arrayValues);
     
     //Queries
     if (parserUrlInstance.search) {
       let queries = parserUrlInstance.search;
       const queriesObject = CreateQueryObject(queries);
-      mergedObject = {...variablesObject, ...queriesObject};
+      const mergedObject = {...variablesObject, ...queriesObject};
       outputObject = JSON.stringify(mergedObject);
     }
     else {
       outputObject = JSON.stringify(variablesObject);
-    }
-    console.log("object", outputObject);   
+    } 
   }
   else {
     outputObject = "You must fill both boxes and provide a url with domain!";    

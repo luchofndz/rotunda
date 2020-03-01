@@ -7,7 +7,6 @@ class Zoo {
     return this.animalCollection;
   }
   createAnimal(animalSelected, message) {
-    console.log("values selected:", animalSelected, message);
     const animal = new Animal;
     let sound = this.getAnimalSound(animalSelected);
     animal.animalSound(sound);
@@ -50,7 +49,6 @@ class Animal {
   }
   speak(inputText) {
     let output = inputText.split(" ").join(this.word);
-    console.log(output);
     document.getElementById("output-zoo").innerHTML = output;
   }
 }
