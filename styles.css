@@ -32,6 +32,9 @@
   background-color: #BEBEBE;
   border-radius: 5px;
 }
+.img-carousel {
+  height: 500px;
+}
 .footer {
   background-color: #4c4c4c;
   padding-top: 40px;
