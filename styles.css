@@ -35,6 +35,11 @@
 .img-carousel {
   height: 500px;
 }
+.carousel-frame {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #353839;
+}
 .footer {
   background-color: #4c4c4c;
   padding-top: 40px;
