@@ -110,3 +110,9 @@ blockquote div:after {
 .info-url {
   margin-bottom: 10px;
 }
+.body-modal {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
