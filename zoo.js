@@ -19,6 +19,9 @@ class Zoo {
       case "Tiger":
         text = " grr ";
         break;
+      case "Lion":
+        text = " roar ";
+        break;
       case "Cow":
         text = " muu ";
         break;
@@ -49,6 +52,7 @@ class Animal {
   }
   speak(inputText) {
     let output = inputText.split(" ").join(this.word);
+    output = output.trim() + this.word;
     document.getElementById("output-zoo").innerHTML = output;
   }
 }
