@@ -18,7 +18,7 @@ getInputValues = () => {
     //Delete white spaces, colon and constant variables
     let arrayKeys = [];
     let arrayValues = [];
-    for (i = 0; i < formatNotFiltered.length; i++) {
+    for (let i = 0; i < formatNotFiltered.length; i++) {
       if (formatNotFiltered[i] !=='' && formatNotFiltered[i].charAt(0) === ':') {
         arrayKeys.push(formatNotFiltered[i].substring(1));
         if (valuesNotFiltered[i] && valuesNotFiltered[i] !=='') {
@@ -50,7 +50,7 @@ getInputValues = () => {
 
 createObject = (listKey, listValue) => {
   let objectKValue = {};
-  for (i = 0; i < listKey.length; i++) {
+  for (let i = 0; i < listKey.length; i++) {
     let key = listKey[i];
     let value = listValue[i];
     objectKValue[key] = value;
